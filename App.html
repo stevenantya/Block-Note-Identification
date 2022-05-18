@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUS CAC Angklung</title>
+    <link rel="stylesheet" href="App.css" />
+  </head>
+  <body>
+    <div>
+      <div class="topBoxContainer">
+        <div class="topBox">
+          <div class="notesContainer"><p id="notes">1</p></div>
+          <div class="bottomContainer">
+            <table class="buttonContainer">
+              <tr>
+                <td>
+                  <button class="buttonNotes">Cb</button>
+                </td>
+                <td><button class="buttonNotes">Db</button></td>
+                <td><button class="buttonNotes">Eb</button></td>
+                <td><button class="buttonNotes">Fb</button></td>
+                <td><button class="buttonNotes">Gb</button></td>
+                <td><button class="buttonNotes">Ab</button></td>
+                <td><button class="buttonNotes">Bb</button></td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="buttonNotes" onclick="checkNotes(this, 1)">
+                    C
+                  </button>
+                </td>
+                <td>
+                  <button class="buttonNotes" onclick="checkNotes(this, 2)">
+                    D
+                  </button>
+                </td>
+                <td>
+                  <button class="buttonNotes" onclick="checkNotes(this, 3)">
+                    E
+                  </button>
+                </td>
+                <td>
+                  <button class="buttonNotes" onclick="checkNotes(this, 4)">
+                    F
+                  </button>
+                </td>
+                <td>
+                  <button class="buttonNotes" onclick="checkNotes(this, 5)">
+                    G
+                  </button>
+                </td>
+                <td>
+                  <button class="buttonNotes" onclick="checkNotes(this, 6)">
+                    A
+                  </button>
+                </td>
+                <td>
+                  <button class="buttonNotes" onclick="checkNotes(this, 7)">
+                    B
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><button class="buttonNotes">C#</button></td>
+                <td><button class="buttonNotes">D#</button></td>
+                <td><button class="buttonNotes">E#</button></td>
+                <td><button class="buttonNotes">F#</button></td>
+                <td><button class="buttonNotes">G#</button></td>
+                <td><button class="buttonNotes">A#</button></td>
+                <td><button class="buttonNotes">B#</button></td>
+              </tr>
+            </table>
+            <div class="buttons"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let rand = Math.floor(Math.random() * 7 + 1);
+      document.getElementById("notes").innerHTML = rand;
+
+      function rerand() {
+        rand = Math.floor(Math.random() * 7 + 1);
+        document.getElementById("notes").innerHTML = rand;
+      }
+      function checkNotes(element, note) {
+        console.log(note);
+        if (note === rand) {
+          element.style.background = "green";
+          setTimeout(() => {
+            let list = document.getElementsByClassName("buttonNotes");
+            for (let item of list) {
+              item.style.background = "rgba(0, 0, 0, 0.4)";
+            }
+            rerand();
+          }, 2000);
+        } else element.style.background = "red";
+      }
+    </script>
+  </body>
+</html>

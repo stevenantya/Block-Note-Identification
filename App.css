@@ -1,0 +1,58 @@
+.topBoxContainer {
+  display: flex;
+  height: 600px;
+  background-color: white;
+  justify-content: center;
+}
+.topBox {
+  display: flex;
+  height: 525px;
+  width: 600px;
+  background-color: gray;
+  border-radius: 0px 0px 15px 15px;
+  justify-content: center;
+  flex-direction: column;
+}
+.notesContainer {
+  display: flex;
+  height: 250px;
+  width: 600px;
+  background-color: #efebeb;
+  border-radius: 0px 0px 15px 15px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bottomContainer {
+  display: flex;
+  height: 300px;
+  background-color: gray;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.buttonContainer {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.buttonNotes {
+  border: 0.4rem solid black;
+  border-radius: 0.5rem;
+  margin: 0.1rem;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  transition: all 0.5s ease;
+  width: 3rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 0.5rem black;
+}
+#notes {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 100px;
+}
